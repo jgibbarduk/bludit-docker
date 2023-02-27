@@ -57,7 +57,7 @@ WORKDIR /tmp
 RUN curl -o /tmp/bludit.zip ${bludit_url} && \
 	unzip /tmp/bludit.zip && \
 	rm -rf /usr/share/nginx/html && \
-	cp -r bludit-* /usr/share/nginx/html && \
+	cp -r bludit/bl-* /usr/share/nginx/html && \
 	chown -R nginx:nginx /usr/share/nginx/html && \
 	chmod 755 ${bludit_content} && \
 	sed -i "s/'DEBUG_MODE', FALSE/'DEBUG_MODE', TRUE/g" /usr/share/nginx/html/bl-kernel/boot/init.php && \
